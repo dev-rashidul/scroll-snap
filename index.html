@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Snap Image Gallery</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        height: 100vh;
+        scroll-behavior: smooth; /* Added smooth scrolling */
+      }
+      .container img {
+        min-height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        scroll-snap-align: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://files.worldwildlife.org/wwfcmsprod/images/Tiger_resting_Bandhavgarh_National_Park_India/hero_small/6aofsvaglm_Medium_WW226365.jpg"
+        alt="Tiger"
+      />
+      <img
+        src="https://www.lionstigersandbears.org/wp-content/uploads/2023/09/Lions-roar-as-a-form-of-communication-and-territorial-calls-featuring-a-male-lion-with-an-impressive-mane_1557343154.jpg"
+        alt="Lion"
+      />
+      <img
+        src="https://thumbs.dreamstime.com/b/ferocious-evil-cat-windowsill-street-angry-mi-mistrustful-cussing-looks-maliciously-incredulously-88840067.jpg"
+        alt="Cat"
+      />
+    </div>
+  </body>
+</html>
